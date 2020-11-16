@@ -1,11 +1,11 @@
 {
-  "name": "random",
-  "version": "2.2.0",
-  "description": "Seedable random number generator supporting many common distributions.",
+  "name": "super-random.js",
+  "version": "1.0.0",
+  "description": "Seedable random generator supporting many common distributions. Random numbers and string generation.",
   "main": "index.js",
   "module": "src/random.js",
-  "repository": "transitive-bullshit/random",
-  "author": "Travis Fischer <travis@automagical.ai>",
+  "repository": "JediThePro/random.js",
+  "author": "JediThePro",
   "license": "MIT",
   "reveal": true,
   "scripts": {
@@ -20,7 +20,7 @@
     "test": "ava -v && standard"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "keywords": [
     "random",
