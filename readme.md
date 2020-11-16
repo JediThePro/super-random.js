@@ -1,32 +1,19 @@
-# random
+# <code>super-random.js</code>
 
-> Seedable random number generator supporting many common distributions.
+> Seedable random generator supporting many common distributions. Random numbers and string generation.
 
-[![NPM](https://img.shields.io/npm/v/random.svg)](https://www.npmjs.com/package/random) [![Build Status](https://travis-ci.com/transitive-bullshit/random.svg?branch=master)](https://travis-ci.com/transitive-bullshit/random) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Welcome to the most **random** module on npm!
 
-Welcome to the most **random** module on npm! 😜
-
-## Highlights
-
--   Simple API (_make easy things easy and hard things possible_)
--   Seedable based on entropy or user input
--   Plugin support for different pseudo random number generators (PRNGs)
--   Sample from many common distributions
-    -   uniform, normal, poisson, bernoulli, etc
--   Validates all user input via [ow](https://github.com/sindresorhus/ow)
--   Integrates with [seedrandom](https://github.com/davidbau/seedrandom)
--   Supports node >= 6 and browser
-
-## Install
+## Installation
 
 ```bash
-npm install --save random
+npm install --save super-random.js
 ```
 
 ## Usage
 
 ```js
-const random = require('random')
+const random = require('super-random.js')
 
 // quick uniform shortcuts
 random.float(min = 0, max = 1) // uniform float in [ min, max )
@@ -187,7 +174,7 @@ Type: `function (args)`
 Example:
 
 ```javascript
-const random = require('random')
+const random = require('super-random.js')
 
 random.use('example_seedrandom_string')
 // or
@@ -419,68 +406,3 @@ Generates a [Pareto distribution](https://en.wikipedia.org/wiki/Pareto_distribut
 Type: `function (alpha): function`
 
 -   `alpha` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Alpha (optional, default `1`)
-
-* * *
-
-## Todo
-
--   Distributions
-
-    -   [x] uniform
-    -   [x] uniformInt
-    -   [x] uniformBoolean
-    -   [x] normal
-    -   [x] logNormal
-    -   [ ] chiSquared
-    -   [ ] cauchy
-    -   [ ] fischerF
-    -   [ ] studentT
-    -   [x] bernoulli
-    -   [x] binomial
-    -   [ ] negativeBinomial
-    -   [x] geometric
-    -   [x] poisson
-    -   [x] exponential
-    -   [ ] gamma
-    -   [ ] hyperExponential
-    -   [ ] weibull
-    -   [ ] beta
-    -   [ ] laplace
-    -   [x] irwinHall
-    -   [x] bates
-    -   [x] pareto
-
--   Generators
-
-    -   [x] pluggable prng
-    -   [ ] port more prng from boost
-    -   [ ] custom entropy
-
--   Misc
-    -   [x] browser support via rollup
-    -   [x] basic docs
-    -   [x] basic tests
-    -   [x] test suite
-    -   [x] initial release!
-
-## Related
-
--   [d3-random](https://github.com/d3/d3-random) - D3's excellent random number generation library.
--   [seedrandom](https://github.com/davidbau/seedrandom) - Seedable pseudo random number generator.
--   [random-int](https://github.com/sindresorhus/random-int) - For the common use case of generating uniform random ints.
--   [random-float](https://github.com/sindresorhus/random-float) - For the common use case of generating uniform random floats.
--   [randombytes](https://github.com/crypto-browserify/randombytes) - Random crypto bytes for Node.js and the browser.
-
-## Credit
-
-Huge shoutout to [Roger Combs](https://github.com/rcombs) for donating the `random` npm package for this project!
-
-Lots of inspiration from [d3-random](https://github.com/d3/d3-random) ([@mbostock](https://github.com/mbostock) and [@svanschooten](https://github.com/svanschooten)).
-
-Some distributions and PRNGs are ported from C++ [boost::random](https://www.boost.org/doc/libs/1_66_0/doc/html/boost_random/reference.html#boost_random.reference.distributions).
-
-## License
-
-MIT © [Travis Fischer](https://github.com/transitive-bullshit)
-
-Support my OSS work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
